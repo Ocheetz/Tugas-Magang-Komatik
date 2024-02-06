@@ -49,7 +49,7 @@ void remove_index(int arr[][2], int index, int& arr_size)
 	arr_size--;
 }
 
-void make_map(int mapp[][4])
+void make_map(int mapp[][4]) // fungsi untuk membuat map random
 {
 	int p1[] = { rand() % W, rand() % L };
 	int saved[W * L][2];
@@ -95,7 +95,7 @@ void make_map(int mapp[][4])
 	}
 }
 
-void print_map(int mapp[][4])
+void print_map(int mapp[][4]) // untuk memperlihatkan map yang terbentuk
 {
     for (int i = 0; i < L * 4; i++) cout << '_';
 	cout << "_\n";
@@ -117,7 +117,7 @@ void print_map(int mapp[][4])
 	}
 }
 
-void display(int mapp[][4], int width, int length, int position[2])
+void display(int mapp[][4], int width, int length, int position[2]) // untuk menampilkan permainan
 {
     system("cls");
 	int showed[width][length][4];
@@ -165,7 +165,7 @@ void display(int mapp[][4], int width, int length, int position[2])
     cout << "////\n";
 }
 
-int walk(char a, int mapp[][4], int (&position)[2])
+int walk(char a, int mapp[][4], int (&position)[2]) // fungsi untuk jalan, merubah posisi saat ditekan wasd
 {
     switch(a){
     case 'w':
@@ -197,7 +197,7 @@ int walk(char a, int mapp[][4], int (&position)[2])
     return 0;
 }
 
-void start()
+void start() // yang ditampilkan saat mulai
 {
     system("cls");
     char in;
@@ -221,7 +221,7 @@ void start()
     }
 }
 
-void finish()
+void finish() // yang ditampilkan saat selesai
 {
     char c;
     cout
