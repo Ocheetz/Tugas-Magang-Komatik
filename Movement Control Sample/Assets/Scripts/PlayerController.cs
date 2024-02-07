@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
         Vector3 arah = new Vector3(horizontalInput, 0, verticalInput).normalized; // supaya kecepatannya sama untuk semua arah
-        transform.Translate(arah * speed * Time.deltaTime);
+        // transform.Translate(arah * speed * Time.deltaTime);
+        playerRb.velocity = arah * speed + new Vector3(0, playerRb.velocity.y, 0);
 
         // lompat
         if (Input.GetKeyDown(KeyCode.Space) && ableToJump) // tekan spasi untuk lompat
